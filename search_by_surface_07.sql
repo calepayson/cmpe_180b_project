@@ -1,6 +1,6 @@
 -- Search by Surface
--- Version: 04
--- Memory Use: 871.08 MB
+-- Version: 07
+-- Memory Use: 680.78 MB
 -- Notes: Return only repositories with a dependency count in the desired range.
 
 DECLARE min_deps INT64 DEFAULT 500;
