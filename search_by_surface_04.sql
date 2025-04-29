@@ -1,10 +1,11 @@
 -- Search by Surface
 -- Version: 04
 -- Memory Use: 871.08 MB
--- Notes: Recursively search dependencies and only return results within the desired range.
+-- Notes: Recursively search dependencies and only return results within the desired range. Limits depth.
 
 DECLARE min_deps INT64 DEFAULT 50;
 DECLARE max_deps INT64 DEFAULT 150;
+DECLARE max_depth INT64 DEFAULT 5;
 
 WITH RECURSIVE all_dependencies AS (
   -- Base case: direct dependencies
@@ -27,6 +28,7 @@ WITH RECURSIVE all_dependencies AS (
   JOIN 
     `bigquery-public-data.libraries_io.dependencies` AS d 
     ON ad.dependency_project_id = d.project_id
+  WHERE ad.depth < max_depth;
 )
 
 SELECT
