@@ -1,7 +1,10 @@
 /*
  * Search by Project
  * Version: Final
- * Memory Use: 1.65 G
+ * Duration: 1 sec
+ * Bytes Processed: 391.91 MB
+ * Reads: 77,456,222
+ * Writes: 14,010
  * 
  * Description:
  *   Builds a tree of upstream dependents using the dependencies table.
