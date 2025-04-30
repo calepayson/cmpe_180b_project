@@ -1,7 +1,10 @@
 /*
  * Search by Surface
  * Version: Final
- * Memory Use: 1.65 G
+ * Bytes Processed: 391.91 MB
+ * Duration: 11 sec
+ * Reads: 214,814,174
+ * Writes: 111,566,688
  * 
  * Description:
  *   Builds a tree of downstream dependents using the dependencies table.
